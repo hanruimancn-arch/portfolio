@@ -5,6 +5,7 @@ import './styles.css'
 const supportingProjects = [
   {
     no: '01',
+    slug: 'loreal-market-research',
     brand: 'L’Oréal Group',
     type: '高端美妆市场研究',
     title: '市场研究的价值，是改变策略关注点',
@@ -12,9 +13,13 @@ const supportingProjects = [
     copy: '搭建高端美妆竞品分析框架，基于 SICAS 模型拆解兰蔻彩妆消费者旅程。核心发现是品牌曝光与市场份额具备优势，但用户忠诚度相对不足。',
     tags: ['Insight', 'SICAS', 'Strategy'],
     theme: 'coral',
+    role: '市场研究 · 竞品分析 · 策略洞察',
+    deliverables: '竞品分析框架、消费者旅程拆解、品牌策略机会点',
+    gallery: ['研究框架', '消费者旅程', '竞品分析', '策略结论'],
   },
   {
     no: '02',
+    slug: 'roger-dubuis-content',
     brand: 'Roger Dubuis',
     type: '品牌社媒内容矩阵',
     title: '把复杂制表语言，转化为用户愿意阅读的内容',
@@ -22,9 +27,13 @@ const supportingProjects = [
     copy: '围绕品牌故事、产品解读、传播话题与视觉内容，将复杂机芯、材质和制表工艺转化为准确，同时保有高级感与想象空间的社媒表达。',
     tags: ['Content', 'Luxury', 'Editorial'],
     theme: 'blue',
+    role: '社媒内容策略 · 编辑策划 · 产品转译',
+    deliverables: '品牌故事、产品解读、传播话题与社媒内容',
+    gallery: ['内容矩阵', '产品解读', '视觉内容', '传播表现'],
   },
   {
     no: '03',
+    slug: 'appsflyer-brian-ip',
     brand: 'AppsFlyer',
     type: '“我的同事布莱恩”品牌 IP',
     title: 'B2B 品牌也需要进入用户的日常对话',
@@ -32,9 +41,13 @@ const supportingProjects = [
     copy: '将品牌小熊转译为一位熟悉数字营销职场语境的同事，围绕开会、加班、数据波动、客户沟通及日常情绪，形成可持续延展的表情包内容体系。',
     tags: ['Creative IP', 'B2B', 'Localization'],
     theme: 'cream',
+    role: '品牌 IP 本土化 · 创意策划 · 内容运营',
+    deliverables: '角色设定、职场语境转译、表情包内容体系',
+    gallery: ['IP 设定', '内容主题', '表情包设计', '日常传播'],
   },
   {
     no: '04',
+    slug: 'appsflyer-mama-2025',
     brand: 'AppsFlyer MAMA',
     type: 'Guangzhou 2025',
     title: '大型活动是用户、内容与线索的协同',
@@ -42,9 +55,13 @@ const supportingProjects = [
     copy: '从活动信息统筹、嘉宾与名单管理，到现场流程、双语内容传播和会后线索归档，完成活动执行、品牌传播与客户资产沉淀的协同支持。',
     tags: ['Event', 'B2B', 'Lead Management'],
     theme: 'lime',
+    role: '活动统筹 · 双语传播 · 线索管理',
+    deliverables: '嘉宾与名单管理、现场流程、内容传播与会后归档',
+    gallery: ['活动主视觉', '现场空间', '嘉宾与流程', '传播与复盘'],
   },
   {
     no: '05',
+    slug: 'event-portfolio',
     brand: 'Event Portfolio',
     type: '赛事 × 艺术节',
     title: '不同活动场景，考验同一种复杂项目统筹能力',
@@ -52,9 +69,13 @@ const supportingProjects = [
     copy: '参与 Roger Dubuis × Lamborghini Super Trofeo 赛事观赛活动，以及北京雷动天下国际现代舞周，沉淀多方沟通、复杂流程管理与现场应变能力。',
     tags: ['Experience', 'KOL', 'Coordination'],
     theme: 'lavender',
+    role: '项目统筹 · 多方协同 · 现场执行',
+    deliverables: '赛事观赛活动、国际现代舞周与现场内容复盘',
+    gallery: ['赛事活动', '嘉宾体验', '艺术节现场', '内容复盘'],
   },
   {
     no: '06',
+    slug: 'xiaohongshu-creator',
     brand: 'Xiaohongshu',
     type: '个人账号运营',
     title: '从内容创作者视角理解平台',
@@ -62,6 +83,9 @@ const supportingProjects = [
     copy: '以“舞蹈研究生＋艺术专业背景＋生活方式”为核心定位，完成用户兴趣观察、选题、脚本、拍摄、剪辑、标题封面优化、发布运营与数据复盘。',
     tags: ['Creator', 'Lifestyle', 'Operation'],
     theme: 'pink',
+    role: '账号定位 · 内容创作 · 数据复盘',
+    deliverables: '选题脚本、拍摄剪辑、标题封面与发布运营',
+    gallery: ['账号定位', '内容选题', '品牌合作', '数据表现'],
   },
 ]
 
@@ -115,7 +139,7 @@ function Header() {
   )
 }
 
-function App() {
+function HomePage() {
   useEffect(() => {
     const nodes = document.querySelectorAll('.reveal')
     const observer = new IntersectionObserver(
@@ -301,7 +325,12 @@ function App() {
           </div>
           <div className="project-grid">
             {supportingProjects.map((project) => (
-              <article className={`project-card ${project.theme} reveal`} key={project.brand}>
+              <a
+                className={`project-card ${project.theme} reveal`}
+                href={`#/project/${project.slug}`}
+                aria-label={`查看 ${project.brand} 项目详情`}
+                key={project.brand}
+              >
                 <div className="project-top"><span>{project.no}</span><span>{project.type}</span></div>
                 <div>
                   <p className="project-brand">{project.brand}</p>
@@ -312,7 +341,7 @@ function App() {
                   <strong>{project.result}</strong>
                   <div>{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </section>
@@ -378,6 +407,95 @@ function App() {
       </footer>
     </>
   )
+}
+
+function ProjectDetail({ project }) {
+  const projectIndex = supportingProjects.findIndex(item => item.slug === project.slug)
+  const previous = supportingProjects[(projectIndex - 1 + supportingProjects.length) % supportingProjects.length]
+  const next = supportingProjects[(projectIndex + 1) % supportingProjects.length]
+
+  useEffect(() => {
+    const originalTitle = document.title
+    document.title = `${project.brand}｜Ivy Han Portfolio`
+    window.scrollTo({ top: 0, behavior: 'instant' })
+    return () => { document.title = originalTitle }
+  }, [project])
+
+  return (
+    <>
+      <Header />
+      <main className={`project-detail ${project.theme}`}>
+        <section className="project-detail-hero">
+          <div className="project-detail-top">
+            <span>{project.no} / Selected Work</span>
+            <span>{project.type}</span>
+          </div>
+          <div className="project-detail-heading">
+            <p>{project.brand}</p>
+            <h1>{project.title}</h1>
+          </div>
+          <div className="project-detail-intro">
+            <p>{project.copy}</p>
+            <strong>{project.result}</strong>
+          </div>
+          <a className="project-back" href="#work">← 返回项目列表</a>
+        </section>
+
+        <section className="project-detail-body">
+          <div className="project-summary">
+            <div>
+              <span className="detail-label">Project Overview</span>
+              <h2>把项目的思考过程，<br />和最终成果放在一起。</h2>
+            </div>
+            <div className="project-facts">
+              <article><span>我的职责</span><p>{project.role}</p></article>
+              <article><span>核心产出</span><p>{project.deliverables}</p></article>
+              <article><span>项目标签</span><div>{project.tags.map(tag => <b key={tag}>{tag}</b>)}</div></article>
+            </div>
+          </div>
+
+          <section className="project-gallery" aria-labelledby={`gallery-${project.slug}`}>
+            <div className="gallery-heading">
+              <div>
+                <span className="detail-label">Visual Materials</span>
+                <h2 id={`gallery-${project.slug}`}>项目图片</h2>
+              </div>
+              <p>这里已经预留图片位置。你补充素材后，我会按照项目叙事顺序替换，并调整裁切比例与说明文字。</p>
+            </div>
+            <div className="gallery-grid">
+              {project.gallery.map((label, index) => (
+                <div className="gallery-placeholder" key={label}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <p>{label}</p>
+                  <small>IMAGE PLACEHOLDER</small>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <nav className="project-pagination" aria-label="项目切换">
+            <a href={`#/project/${previous.slug}`}><span>← Previous</span><strong>{previous.brand}</strong></a>
+            <a href={`#/project/${next.slug}`}><span>Next →</span><strong>{next.brand}</strong></a>
+          </nav>
+        </section>
+      </main>
+    </>
+  )
+}
+
+function App() {
+  const [hash, setHash] = useState(window.location.hash)
+
+  useEffect(() => {
+    const updateRoute = () => setHash(window.location.hash)
+    window.addEventListener('hashchange', updateRoute)
+    return () => window.removeEventListener('hashchange', updateRoute)
+  }, [])
+
+  const match = hash.match(/^#\/project\/([^/?]+)/)
+  const project = match ? supportingProjects.find(item => item.slug === match[1]) : null
+
+  return project ? <ProjectDetail project={project} /> : <HomePage />
 }
 
 createRoot(document.getElementById('root')).render(
