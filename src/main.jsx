@@ -60,6 +60,11 @@ const supportingProjects = [
     type: '品牌活动 / KOL沟通 / Event Communication',
     title: 'Super Trofeo 亚洲挑战赛上海站',
     result: 'KOL邀约—现场体验—活动执行—传播内容',
+    metrics: [
+      { value: '200+', label: '媒体 / KOL / 品牌嘉宾对接人次' },
+      { value: '100+', label: '奢侈品及高端生活方式媒体、KOL资源沉淀' },
+      { value: '20+', label: '品牌传播内容落地' },
+    ],
     copy: '围绕 Roger Dubuis × Lamborghini Squadra Corse 品牌合作，参与 Super Trofeo 亚洲挑战赛上海站观赛活动执行与传播支持。',
     tags: ['KOL沟通', '品牌活动执行', '活动传播'],
     theme: 'lavender',
@@ -500,7 +505,16 @@ function ProjectDetail({ project }) {
           </div>
           <div className="project-detail-intro">
             <p>{project.copy}</p>
-            <strong>{project.result}</strong>
+            {project.metrics ? (
+              <div className="project-detail-outcome">
+                <div className="project-detail-metrics" aria-label="项目数据">
+                  {project.metrics.map(metric => (
+                    <p key={metric.value}><b>{metric.value}</b><span>{metric.label}</span></p>
+                  ))}
+                </div>
+                <strong>{project.result}</strong>
+              </div>
+            ) : <strong>{project.result}</strong>}
           </div>
           <a className="project-back" href="#work">← 返回项目列表</a>
         </section>

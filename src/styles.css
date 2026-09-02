@@ -210,6 +210,12 @@ button { color: inherit; font: inherit; }
 .project-detail-intro { display: grid; grid-template-columns: 1.25fr .75fr; gap: 10vw; align-items: end; }
 .project-detail-intro p { max-width: 760px; margin: 0; font-size: clamp(1.05rem, 1.7vw, 1.45rem); line-height: 1.75; }
 .project-detail-intro strong { padding-top: 20px; border-top: 1px solid rgba(23,23,20,.34); font-size: clamp(1.2rem, 2vw, 2rem); line-height: 1.4; }
+.project-detail-outcome { display: flex; flex-direction: column; gap: 32px; }
+.project-detail-metrics { display: grid; gap: 14px; }
+.project-detail-metrics p { display: grid; grid-template-columns: 82px 1fr; gap: 16px; align-items: baseline; max-width: none; font-size: .82rem; line-height: 1.45; }
+.project-detail-metrics b { font-size: clamp(1.55rem, 2vw, 2.25rem); line-height: 1; letter-spacing: -.05em; }
+.project-detail-metrics span { color: #4f4e48; }
+.project-detail-outcome > strong { display: block; }
 .project-back { align-self: flex-start; margin-top: 52px; padding: 11px 16px; border: 1px solid var(--ink); border-radius: 999px; font: 700 .68rem/1 monospace; text-transform: uppercase; transition: color .2s, background .2s; }
 .project-back:hover { color: var(--paper); background: var(--ink); }
 .project-detail-body { max-width: 1600px; margin: auto; padding: 0 4vw 70px; }
