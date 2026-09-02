@@ -283,9 +283,6 @@ function HomePage() {
                 <i>+</i>
                 <div><small>PRIVATE SPACE</small><strong>家具固定不动</strong><span>人需要主动适应布局</span></div>
               </div>
-              <figure className="case-media insight-media">
-                <img src={`${import.meta.env.BASE_URL}libpet-space-transition.jpg`} alt="LIBPET 从公共空间移动服务延展到私人空间未来家具的场景对照" />
-              </figure>
               <blockquote>
                 <span>Brand Belief</span>
                 Space adapts to people.
@@ -316,13 +313,6 @@ function HomePage() {
                   <p>让家具主动响应人的位置、动线与状态。</p>
                 </article>
               </div>
-              <div className="case-media-grid brand-system-media" aria-label="LIBPET 两条产品线的应用场景">
-                <figure><img src={`${import.meta.env.BASE_URL}libpet-aps-airport.jpg`} alt="LIBPET APS 在机场公共空间中的智能接驳场景" /></figure>
-                <figure><img src={`${import.meta.env.BASE_URL}libpet-s-lifestyle.jpg`} alt="LIBPET S 在生活空间中的未来家具体验" /></figure>
-              </div>
-              <figure className="case-media product-architecture-media">
-                <img src={`${import.meta.env.BASE_URL}libpet-product-lines.png`} alt="LIBPET APS 与 LIBPET S 两条产品线的产品架构对照" />
-              </figure>
               <p className="brand-position">LIBPET 以智能移动体验科技，重塑现代空间中的移动、停留与抵达。</p>
             </section>
 
@@ -362,9 +352,6 @@ function HomePage() {
                   <div><small>OFFLINE · FUTURE FURNITURE SALON</small><h4>把新品发布会变成一场“未来家具展”</h4><p>通过家具的过去、家具的未来、产品进入空间、设计沙龙以及体验与线索承接，同时获得产品体验、品牌内容、行业讨论、B 端线索与场景验证。</p></div>
                 </article>
               </div>
-              <figure className="case-media gtm-media">
-                <img src={`${import.meta.env.BASE_URL}libpet-web-visuals.jpg`} alt="LIBPET S 面向海外市场的网站与生活方式传播视觉" />
-              </figure>
             </section>
 
             <section className="results reveal" aria-label="LIBPET 项目成果">

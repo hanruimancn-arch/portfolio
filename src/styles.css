@@ -120,11 +120,6 @@ button { color: inherit; font: inherit; }
 .space-map strong { font-size: clamp(1.5rem, 3vw, 3.4rem); }
 .space-map span { margin-top: 12px; color: rgba(244,241,232,.62); }
 .space-map i { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid rgba(244,241,232,.4); border-radius: 50%; font-style: normal; }
-.case-media, .case-media-grid figure { margin: 0; overflow: hidden; border: 1px solid var(--line); background: #fff; }
-.case-media { margin-top: 34px; }
-.case-media img, .case-media-grid img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.insight-media { border-color: rgba(244,241,232,.2); }
-.insight-media img { aspect-ratio: 16 / 9; object-fit: contain; }
 .insight-panel blockquote { margin: 105px 0 0; text-align: center; font: 700 clamp(3rem, 7vw, 7.5rem)/.95 serif; letter-spacing: -.05em; }
 .insight-panel blockquote > span { display: block; margin-bottom: 24px; color: var(--acid); font: 700 .7rem/1 monospace; text-transform: uppercase; letter-spacing: .08em; }
 .insight-panel blockquote small { display: block; margin-top: 24px; color: rgba(244,241,232,.55); font: 400 1rem/1 sans-serif; letter-spacing: 0; }
@@ -139,10 +134,6 @@ button { color: inherit; font: inherit; }
 .system-core small { font: 700 .66rem/1 monospace; text-transform: uppercase; }
 .system-core strong { font-size: clamp(2rem, 3.5vw, 3.8rem); line-height: 1.05; letter-spacing: -.055em; }
 .system-core span { font: 700 .68rem/1.5 monospace; text-transform: uppercase; }
-.case-media-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 34px; }
-.brand-system-media figure { aspect-ratio: 16 / 10; }
-.product-architecture-media { margin-top: 18px; }
-.product-architecture-media img { aspect-ratio: 1294 / 914; object-fit: contain; }
 .brand-position { max-width: 870px; margin: 120px auto 0; text-align: center; font-size: clamp(1.5rem, 2.5vw, 2.6rem); line-height: 1.45; }
 
 .big-idea { margin: 0 -4vw; padding: 110px 4vw; display: grid; grid-template-columns: 1fr .8fr; gap: 9vw; background: var(--acid); }
@@ -170,8 +161,6 @@ button { color: inherit; font: inherit; }
 .activation-grid small { color: #77756d; font: 700 .64rem/1.3 monospace; }
 .activation-grid h4 { margin: 88px 0 14px; font-size: 1.7rem; letter-spacing: -.04em; }
 .activation-grid p { margin: 0; color: #626159; font-size: .9rem; line-height: 1.75; }
-.gtm-media { margin-top: 18px; }
-.gtm-media img { aspect-ratio: 16 / 9; object-fit: contain; }
 
 .results { margin: 0 -4vw; padding: 120px 4vw 130px; background: #ff6c4d; }
 .results-title { display: grid; grid-template-columns: .35fr 1.65fr; gap: 30px; }
@@ -365,9 +354,6 @@ footer h2 span { color: transparent; -webkit-text-stroke: 2px var(--ink); }
   .system-grid { grid-template-columns: 1fr; margin-top: 60px; }
   .system-grid article:last-child { border-top: 0; }
   .system-core { grid-column: auto; min-height: 310px; }
-  .case-media-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 24px; }
-  .case-media { margin-top: 24px; }
-  .product-architecture-media, .gtm-media { margin-top: 12px; }
   .brand-position { margin-top: 75px; font-size: 1.45rem; }
   .big-idea { grid-template-columns: 1fr; padding-top: 85px; padding-bottom: 90px; }
   .big-idea-copy .eyebrow { margin-top: 50px; }
