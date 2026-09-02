@@ -36,16 +36,21 @@ const supportingProjects = [
     type: 'Brand IP / Local Content / Social Creative',
     title: '「我的同事布莱恩」品牌社交化内容',
     result: '工作沟通 / 回复确认 / 日常互动 / 情绪表达',
-    copy: '基于 AppsFlyer 已有“小熊”品牌形象，参与「我的同事布莱恩」品牌表情包内容策划，希望将原有品牌视觉进一步延展至中国用户熟悉的微信及职场沟通场景。',
+    copy: 'AppsFlyer 本身处于专业度较高的 B2B 营销科技语境，日常品牌沟通更多围绕产品、行业与客户展开。基于已有“小熊”品牌形象，项目尝试为品牌增加一种更轻、更具社交属性的内容表达，将原有视觉资产进一步延展至中国用户熟悉的职场与日常沟通场景。',
     tags: ['品牌IP延展', '内容本地化', '社交创意'],
     theme: 'cream',
     role: 'Brand IP / Local Content / Social Creative',
     deliverables: '品牌IP延展 / 内容本地化 / 社交创意 / 文案策划',
-    gallery: ['品牌形象', '创意参考', '情绪场景', '内容延展'],
+    gallery: ['表情包内容运营'],
+    galleryImages: [
+      { src: 'appsflyer-brian-gallery.jpg', alt: 'AppsFlyer「我的同事布莱恩」表情包内容运营展示' },
+    ],
+    galleryLayout: 'single',
     sections: [
-      { title: '创意调研', body: '前期调研品牌 IP、企业表情包及社交内容案例，从角色动作、情绪表达、中文文案与实际使用场景几个维度整理创意参考。' },
-      { title: '内容场景', body: '结合日常职场及社交沟通，将内容划分为工作沟通、回复确认、日常互动与情绪表达，并针对不同场景匹配人物动作、表情状态及中文文案，避免表情包只停留在简单的“开心 / 生气 / 难过”等泛化表达。' },
-      { title: '内容延展', body: '进一步参与完成视觉风格参考、素材筛选、情绪场景分类、文案语境与创意方向梳理，将已有品牌形象延展为更具实际使用场景的社交内容。' },
+      { title: 'B2B品牌社交化', body: '不改变品牌专业属性，而是在正式行业内容之外增加更轻量的沟通触点，通过品牌 IP 拉近与用户之间的距离。' },
+      { title: '场景拆解', body: '围绕职场沟通、回复确认、日常互动与情绪表达等高频场景，梳理用户真实使用表情包的语境，让内容从“品牌想表达什么”转向“用户什么时候会使用”。' },
+      { title: '内容设计', body: '根据不同场景匹配人物动作、情绪状态、中文文案与使用语境，并结合品牌 IP 案例研究、视觉风格参考与素材筛选，形成更符合中国本地社交习惯的内容表达。' },
+      { title: '品牌资产延展', body: '将原本偏静态的“小熊”视觉形象进一步转化为「我的同事布莱恩」表情包系列，使品牌 IP 从识别符号延展为可被使用、分享和互动的社交内容。' },
     ],
   },
   {
@@ -534,7 +539,7 @@ function ProjectDetail({ project }) {
               </div>
               <p>这里已经预留图片位置。你补充素材后，我会按照项目叙事顺序替换，并调整裁切比例与说明文字。</p>
             </div>
-            <div className="gallery-grid">
+            <div className={`gallery-grid ${project.galleryLayout === 'single' ? 'single-gallery' : ''}`}>
               {project.gallery.map((label, index) => {
                 const image = project.galleryImages?.[index]
                 return image ? (
