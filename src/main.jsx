@@ -212,10 +212,10 @@ function HomePage() {
             <strong>品牌策略｜整合营销｜海外KOL</strong>
             <span>Brand Strategy &amp; Integrated Marketing Portfolio</span>
           </div>
-          <h1>让复杂产品，<br /><em>被市场理解。</em></h1>
+          <h1>把产品讲清楚，<br /><em>把想法做出来。</em></h1>
           <div className="hero-bottom">
             <div>
-              <p>我为尚未形成市场共识的品牌与新品，找到一个能够被理解、被传播，也能够被市场验证的答案。</p>
+              <p>我对内容、审美与表达保持敏感。</p>
               <p className="hero-name">韩蕊蔓 Ivy Han · Shenzhen / Beijing</p>
             </div>
             <a className="scroll-cue" href="#case"><span>Explore selected work</span><b>↓</b></a>
