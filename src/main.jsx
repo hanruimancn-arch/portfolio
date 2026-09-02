@@ -16,6 +16,12 @@ const supportingProjects = [
     role: '品牌内容 / 产品传播 / Social Media',
     deliverables: '品牌内容策划 / 产品信息转化 / 社媒文案 / 视觉内容协同',
     gallery: ['品牌内容', '产品内容', '节点内容', '内容呈现'],
+    galleryImages: [
+      { src: 'roger-dubuis-gallery-01.jpg', alt: 'Roger Dubuis 品牌标识视觉' },
+      { src: 'roger-dubuis-gallery-02.jpg', alt: 'Roger Dubuis 社媒内容成果与阅读数据' },
+      { src: 'roger-dubuis-gallery-03.jpg', alt: 'Roger Dubuis 腕表产品信息长图' },
+      { src: 'roger-dubuis-gallery-04.jpg', alt: 'Roger Dubuis 微博内容与视觉呈现' },
+    ],
     sections: [
       { title: '内容策略', body: '根据新品上市、品牌故事、复杂制表及赛事合作等不同传播任务规划选题，将内容拆分为品牌叙事、产品解读与文化场景等方向。品牌向内容强化先锋精神与高级制表美学；产品向内容从复杂功能、机芯及设计信息中提炼核心卖点；赛车合作内容则通过速度、机械性能与先锋生活方式，为腕表产品增加更具场景感的传播切口。' },
       { title: '信息转化', body: '针对腕表资料专业度高、阅读门槛高的问题，重新调整信息层级：先突出最具辨识度的产品特点，再补充机芯、工艺与品牌背景，使专业信息既保持准确性，又符合社媒用户的阅读习惯。' },
@@ -529,13 +535,20 @@ function ProjectDetail({ project }) {
               <p>这里已经预留图片位置。你补充素材后，我会按照项目叙事顺序替换，并调整裁切比例与说明文字。</p>
             </div>
             <div className="gallery-grid">
-              {project.gallery.map((label, index) => (
-                <div className="gallery-placeholder" key={label}>
-                  <span>{String(index + 1).padStart(2, '0')}</span>
-                  <p>{label}</p>
-                  <small>IMAGE PLACEHOLDER</small>
-                </div>
-              ))}
+              {project.gallery.map((label, index) => {
+                const image = project.galleryImages?.[index]
+                return image ? (
+                  <figure className="gallery-image" key={label}>
+                    <img src={`${import.meta.env.BASE_URL}${image.src}`} alt={image.alt} loading="lazy" />
+                  </figure>
+                ) : (
+                  <div className="gallery-placeholder" key={label}>
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <p>{label}</p>
+                    <small>IMAGE PLACEHOLDER</small>
+                  </div>
+                )
+              })}
             </div>
           </section>
 
