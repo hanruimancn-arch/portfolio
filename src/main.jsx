@@ -97,6 +97,12 @@ const supportingProjects = [
     role: 'B2B Marketing / Event / Communication',
     deliverables: 'B2B活动 / 嘉宾管理 / 项目协同 / 品牌传播 / 客户信息整理',
     gallery: ['会前筹备', '现场执行', '会后传播', '数据与线索'],
+    galleryImages: [
+      { src: 'appsflyer-mama-gallery-01.jpg', alt: 'AppsFlyer MAMA Guangzhou 2025 峰会活动现场' },
+      { src: 'appsflyer-mama-gallery-02.jpg', alt: 'AppsFlyer MAMA Guangzhou 2025 嘉宾互动体验' },
+      { src: 'appsflyer-mama-gallery-03.jpg', alt: 'AppsFlyer MAMA Guangzhou 2025 论坛议题现场' },
+      { src: 'appsflyer-mama-gallery-04.jpg', alt: 'AppsFlyer MAMA Guangzhou 2025 主题演讲现场' },
+    ],
     sections: [
       { title: '会前筹备', body: '整理嘉宾资料、参会名单、客户信息及活动物料，并根据活动进度持续更新人员和现场信息，为签到、嘉宾接待及现场执行建立信息基础。' },
       { title: '现场执行', body: '参与签到、嘉宾接待、现场引导、流程协同及物料管理，在大量企业嘉宾集中到场的情况下及时同步人员、流程和现场信息。' },
