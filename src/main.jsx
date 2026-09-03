@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
+import { InteractiveHoverButton } from './components/InteractiveHoverButton'
 import './styles.css'
 
 const supportingProjects = [
@@ -212,6 +213,8 @@ function Header() {
 }
 
 function HomePage() {
+  const [isCaseExpanded, setIsCaseExpanded] = useState(false)
+
   useEffect(() => {
     const nodes = document.querySelectorAll('.reveal')
     const observer = new IntersectionObserver(
@@ -220,7 +223,17 @@ function HomePage() {
     )
     nodes.forEach(node => observer.observe(node))
     return () => observer.disconnect()
-  }, [])
+  }, [isCaseExpanded])
+
+  const toggleCaseDetails = () => {
+    const nextExpanded = !isCaseExpanded
+    setIsCaseExpanded(nextExpanded)
+    if (nextExpanded) {
+      window.setTimeout(() => {
+        document.getElementById('case-details')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 80)
+    }
+  }
 
   return (
     <>
@@ -272,6 +285,14 @@ function HomePage() {
             <div className="case-cover-center">
               <span className="libpet-mark">LIBPET</span>
               <h2>从“可驾驶按摩椅”<br />到“未来家具”</h2>
+              <InteractiveHoverButton
+                className="case-detail-trigger mt-9 sm:mt-10"
+                onClick={toggleCaseDetails}
+                aria-expanded={isCaseExpanded}
+                aria-controls="case-details"
+              >
+                详细看看
+              </InteractiveHoverButton>
             </div>
             <div className="case-cover-bottom">
               <p>我的任务不是分别宣传两款产品，而是回答一个更根本的问题：</p>
@@ -280,7 +301,7 @@ function HomePage() {
             <div className="orbit-visual" aria-hidden="true"><i></i><b>S</b><span>APS</span></div>
           </div>
 
-          <div className="case-body">
+          <div className="case-body" id="case-details" hidden={!isCaseExpanded}>
             <section className="case-section reveal">
               <div className="case-index">01 / Challenge</div>
               <div className="case-section-title">

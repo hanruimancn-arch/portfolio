@@ -1,3 +1,14 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+}
+
 :root {
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   color: #171714;
@@ -10,6 +21,11 @@
   --coral: #ff6c4d;
   --blue: #5680ff;
   --line: rgba(23, 23, 20, .22);
+  --background: #f4f1e8;
+  --foreground: #171714;
+  --primary: #171714;
+  --primary-foreground: #f4f1e8;
+  --border: rgba(23, 23, 20, .5);
 }
 
 * { box-sizing: border-box; }
@@ -85,6 +101,8 @@ button { color: inherit; font: inherit; }
 .case-cover-center { position: relative; z-index: 2; }
 .libpet-mark { display: block; margin-bottom: 28px; font: 800 .78rem/1 monospace; letter-spacing: .2em; }
 .case-cover h2 { max-width: 1060px; margin: 0; font-size: clamp(3.5rem, 7.8vw, 8rem); line-height: .95; letter-spacing: -.07em; }
+.case-detail-trigger { position: relative; z-index: 3; min-width: 142px; letter-spacing: .02em; }
+.case-detail-trigger:hover, .case-detail-trigger:focus-visible { border-color: var(--ink); }
 .case-cover-bottom { position: relative; z-index: 2; max-width: 630px; padding-left: 22px; border-left: 2px solid var(--ink); }
 .case-cover-bottom p { margin: 0 0 8px; color: rgba(23,23,20,.65); }
 .case-cover-bottom strong { font-size: 1.2rem; }
