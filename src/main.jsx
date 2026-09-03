@@ -146,7 +146,11 @@ const supportingProjects = [
     role: 'Content Creation / Xiaohongshu / Video',
     deliverables: '内容策划 / 短视频制作 / 小红书运营 / 数据观察',
     overview: '从0到1独立运营个人账号，累计曝光20万+',
-    gallery: ['内容策划', '内容制作', '品牌合作', '数据表现'],
+    gallery: ['内容创作与账号运营'],
+    galleryImages: [
+      { src: 'xiaohongshu-gallery.jpg', alt: '个人小红书内容创作与账号运营作品合集' },
+    ],
+    galleryLayout: 'single',
     sections: [
       { title: '账号定位', body: '以“舞蹈研究生 / 艺术专业背景 / 生活方式分享”为核心内容方向，将专业知识、校园生活与个人体验转化为更适合小红书阅读和观看的内容，兼顾专业度与日常感。' },
       { title: '内容策划', body: '根据个人经历、用户关注点与平台内容偏好确定选题，判断采用图文或视频形式，并进一步完成标题、脚本、内容结构与拍摄方向设计。' },
@@ -550,7 +554,6 @@ function ProjectDetail({ project }) {
                 <span className="detail-label">Visual Materials</span>
                 <h2 id={`gallery-${project.slug}`}>项目图片</h2>
               </div>
-              <p>这里已经预留图片位置。你补充素材后，我会按照项目叙事顺序替换，并调整裁切比例与说明文字。</p>
             </div>
             <div className={`gallery-grid ${project.galleryLayout === 'single' ? 'single-gallery' : ''}`}>
               {project.gallery.map((label, index) => {
