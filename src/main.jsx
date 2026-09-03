@@ -111,7 +111,7 @@ const supportingProjects = [
     closing: '整个项目让我接触到 B2B 活动中嘉宾管理、现场执行、品牌传播与客户信息管理之间的协同，而不仅是单一的现场活动执行。',
   },
   {
-    no: '06',
+    no: '05',
     slug: 'lancome-peptide-cream',
     brand: 'Lancôme',
     type: 'Market Research / Consumer Insight / Product Marketing',
@@ -122,7 +122,11 @@ const supportingProjects = [
     theme: 'coral',
     role: 'Market Research / Consumer Insight / Product Marketing',
     deliverables: '市场研究 / 用户分析 / 产品卖点提炼 / 美妆营销 / 渠道规划',
-    gallery: ['市场分析', '产品拆解', '传播延展', '渠道规划'],
+    gallery: ['市场分析', '产品拆解'],
+    galleryImages: [
+      { src: 'lancome-gallery-01.jpg', alt: '兰蔻百肽霜市场趋势与消费者偏好分析' },
+      { src: 'lancome-gallery-02.jpg', alt: '兰蔻塑颜百肽霜产品展示' },
+    ],
     sections: [
       { title: '市场分析', body: '围绕抗老、紧致、修护及年轻化等功效方向整理市场与消费者需求信息，为产品传播建立基础背景。' },
       { title: '产品拆解', body: '从百肽、抗老、紧致、修护等产品信息中提炼核心功效，并将产品卖点与消费者关注的问题进行对应，而不是简单平铺所有功能。' },
@@ -130,7 +134,7 @@ const supportingProjects = [
     ],
   },
   {
-    no: '07',
+    no: '06',
     slug: 'xiaohongshu-creator',
     brand: '个人小红书',
     type: 'Content Creation / Xiaohongshu / Video',
